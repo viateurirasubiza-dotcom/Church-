@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grace Church | Home</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ================= GLOBAL ================= */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0b1220;
+    color:white;
+}
+
+/* ================= NAVBAR ================= */
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+    background:rgba(15,23,42,0.8);
+    backdrop-filter: blur(10px);
+    z-index:1000;
+}
+
+.logo{
+    font-weight:700;
+    font-size:20px;
+    color:#38bdf8;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin:0 15px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-size:14px;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#38bdf8;
+}
+
+/* ================= HERO ================= */
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+    background: radial-gradient(circle at top,#1e3a8a,#0b1220);
+}
+
+.hero h1{
+    font-size:55px;
+    font-weight:700;
+}
+
+.hero p{
+    margin-top:15px;
+    font-size:18px;
+    opacity:0.8;
+}
+
+.btn{
+    margin-top:25px;
+    padding:12px 25px;
+    border:none;
+    background:linear-gradient(90deg,#38bdf8,#2563eb);
+    color:white;
+    border-radius:30px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+}
+
+/* ================= SECTIONS ================= */
+section{
+    padding:80px 20px;
+    text-align:center;
+}
+
+.title{
+    font-size:30px;
+    margin-bottom:20px;
+    color:#38bdf8;
+}
+
+/* ================= CARDS ================= */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    max-width:1000px;
+    margin:auto;
+}
+
+.card{
+    background:rgba(255,255,255,0.05);
+    padding:20px;
+    border-radius:15px;
+    border:1px solid rgba(255,255,255,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    border-color:#38bdf8;
+}
+
+/* ================= FOOTER ================= */
+footer{
+    background:#0f172a;
+    text-align:center;
+    padding:20px;
+    font-size:13px;
+    opacity:0.7;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <div class="logo">Grace Church</div>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#sermons">Sermons</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+    <h1>Welcome to Grace Church</h1>
+    <p>Faith • Hope • Love • Community</p>
+    <button class="btn" onclick="document.getElementById('about').scrollIntoView()">
+        Explore More
+    </button>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2 class="title">About Us</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Our Mission</h3>
+            <p>To spread the gospel and grow believers in Christ.</p>
+        </div>
+        <div class="card">
+            <h3>Our Vision</h3>
+            <p>A strong spiritual community rooted in faith.</p>
+        </div>
+        <div class="card">
+            <h3>Our Values</h3>
+            <p>Love, Prayer, Unity, Service.</p>
+        </div>
+    </div>
+</section>
+
+<!-- SERMONS -->
+<section id="sermons">
+    <h2 class="title">Latest Sermons</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Faith in God</h3>
+            <p>Trust God even in difficult times.</p>
+        </div>
+        <div class="card">
+            <h3>Power of Prayer</h3>
+            <p>Prayer changes everything.</p>
+        </div>
+        <div class="card">
+            <h3>Walking in Purpose</h3>
+            <p>Discover your God-given destiny.</p>
+        </div>
+    </div>
+</section>
+
+<!-- EVENTS -->
+<section id="events">
+    <h2 class="title">Upcoming Events</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Sunday Service</h3>
+            <p>Every Sunday - 10:00 AM</p>
+        </div>
+        <div class="card">
+            <h3>Bible Study</h3>
+            <p>Wednesday - 6:00 PM</p>
+        </div>
+        <div class="card">
+            <h3>Youth Fellowship</h3>
+            <p>Saturday - 3:00 PM</p>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h2 class="title">Contact Us</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Phone</h3>
+            <p>+250 7XX XXX XXX</p>
+        </div>
+        <div class="card">
+            <h3>Email</h3>
+            <p>church@email.com</p>
+        </div>
+        <div class="card">
+            <h3>Location</h3>
+            <p>Kigali, Rwanda</p>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    © 2026 Grace Church | Designed with ❤️
+</footer>
+
+</body>
+</html>
