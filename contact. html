@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Church</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0b1220,#111827);
+    color:white;
+}
+
+/* NAV */
+nav{
+    padding:15px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(15,23,42,0.7);
+    backdrop-filter: blur(10px);
+    position:sticky;
+    top:0;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 10px;
+    font-size:14px;
+}
+
+nav a:hover{
+    color:#38bdf8;
+}
+
+/* HEADER */
+.header{
+    text-align:center;
+    padding:60px 20px;
+}
+
+.header h1{
+    font-size:40px;
+    color:#38bdf8;
+}
+
+.header p{
+    opacity:0.7;
+    margin-top:10px;
+}
+
+/* CONTAINER */
+.container{
+    max-width:1000px;
+    margin:auto;
+    padding:20px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
+}
+
+/* FORM CARD */
+.card{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.1);
+    padding:20px;
+    border-radius:15px;
+}
+
+/* INPUTS */
+input, textarea{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:none;
+    border-radius:8px;
+    outline:none;
+}
+
+input, textarea{
+    background:#0f172a;
+    color:white;
+}
+
+/* BUTTON */
+button{
+    width:100%;
+    padding:12px;
+    background:linear-gradient(90deg,#38bdf8,#2563eb);
+    border:none;
+    color:white;
+    border-radius:30px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+/* INFO BOX */
+.info{
+    padding:15px;
+    margin-bottom:10px;
+    border-radius:10px;
+    background:rgba(255,255,255,0.05);
+}
+
+/* WHATSAPP BUTTON */
+.whatsapp{
+    display:inline-block;
+    margin-top:10px;
+    padding:10px 15px;
+    background:#25D366;
+    color:white;
+    text-decoration:none;
+    border-radius:20px;
+    font-size:14px;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:20px;
+    font-size:13px;
+    opacity:0.6;
+    margin-top:40px;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div><b>Grace Church</b></div>
+<div>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="sermons.html">Sermons</a>
+<a href="events.html">Events</a>
+<a href="contact.html">Contact</a>
+</div>
+</nav>
+
+<div class="header">
+<h1>Contact Us</h1>
+<p>We are here to support and pray with you</p>
+</div>
+
+<div class="container">
+
+<!-- CONTACT INFO -->
+<div class="card">
+<h3>Church Info</h3>
+
+<div class="info">📍 Kigali, Rwanda</div>
+<div class="info">📞 +250 7XX XXX XXX</div>
+<div class="info">📧 church@email.com</div>
+
+<a class="whatsapp" href="https://wa.me/2507XXXXXXXX" target="_blank">
+💬 Chat on WhatsApp
+</a>
+
+</div>
+
+<!-- CONTACT FORM -->
+<div class="card">
+<h3>Send Message</h3>
+
+<form onsubmit="sendMessage(event)">
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<textarea rows="5" placeholder="Your Message" required></textarea>
+
+<button type="submit">Send Message</button>
+</form>
+
+<p id="msg" style="margin-top:10px;"></p>
+
+</div>
+
+</div>
+
+<footer>
+© 2026 Grace Church | Contact Page
+</footer>
+
+<script>
+function sendMessage(e){
+e.preventDefault();
+document.getElementById("msg").innerText =
+"Message sent successfully ✅ We will contact you soon!";
+}
+</script>
+
+</body>
+</html>
